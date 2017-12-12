@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  
+  block script
+     
+    script(src="http://cdn.peerjs.com/0.3/peer.js")
+      
+    script(src="http://cdn.peerjs.com/0.3/peer.min.js")
+    
+    script(src="/javascripts/peerjsctrl.js")
+    
+  table(width="80%" cellspacing="10")
+    tr
+      td(width="15%" background="white")
+        img(src="/images/download.png" height="180")
+      td
+        img(src="/images/deskoffice.jpg" height="180")
+  div
+    font(color="#ffffff")
+      h1
+        b
+          p Benvenuto in Area P! Accomodati in sala d'attesa
+  table(cellspacing="10")
+    tr
+      td
+        video(id="localCam" width="300" height="300")
+      td
+        video(id="remoteCam" width="300" height="300")
+  button(onclick='videocall()') Chiama
